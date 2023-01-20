@@ -19,10 +19,6 @@ RUN apt-get update \
     && jupyter-kernel.raku --generate-config \
     && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
 
-ENV TINI_VERSION v0.18.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
-RUN chmod +x /usr/bin/tini 
-ENTRYPOINT ["/usr/bin/tini", "--"]
 
 ARG NB_USER=suman
 ARG NB_UID=1000
