@@ -20,7 +20,6 @@ RUN apt-get update \
     && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
 
 
-....................
 
 
 EXPOSE 8888
