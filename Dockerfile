@@ -35,7 +35,6 @@ RUN adduser --disabled-password \
     ${NB_USER}
 
 #For enabling binder..........................
-COPY ./raku-notebooks/ ${HOME}
 
 USER root
 RUN chown -R ${NB_UID} ${HOME}
