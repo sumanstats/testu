@@ -13,7 +13,7 @@ RUN apt-get update \
     && apt-get install -y build-essential \
     wget libzmq3-dev ca-certificates \
     python3-pip python3-setuptools \
-    && rm -rf /var/lib/apt/lists/* && pip3 install jupyter notebook asciinema jupyterlab pyscaffold --no-cache-dir \
+    && rm -rf /var/lib/apt/lists/* && pip3 install jupyter notebook jupyterlab --no-cache-dir \
     && zef -v install git://github.com/bduggan/raku-jupyter-kernel.git --force-test \ 
     && zef install Pod::To::HTML \
     && jupyter-kernel.raku --generate-config \
