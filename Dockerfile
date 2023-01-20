@@ -20,23 +20,7 @@ RUN apt-get update \
     && ln -s /usr/share/perl6/site/bin/* /usr/local/bin
 
 
-ARG NB_USER=suman
-ARG NB_UID=1000
-ENV USER ${NB_USER}
-ENV NB_UID ${NB_UID}
-ENV HOME /home/${NB_USER}
-RUN adduser --disabled-password \
-    --gecos "Default user" \
-    --uid ${NB_UID} \
-    ${NB_USER}
-
-#For enabling binder..........................
-
-USER root
-RUN chown -R ${NB_UID} ${HOME}
-USER ${NB_USER}
-WORKDIR ${HOME}
-#..............................................
+....................
 
 
 EXPOSE 8888
